@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'survey', to: 'landing#step'
+  post 'save_prospect', to:'landing#save_prospect', as: :save_prospect
+
 
   root 'landing#home'
 
