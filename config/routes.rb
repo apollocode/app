@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'survey', to: 'landing#step'
-  post 'save_prospect', to:'landing#save_prospect', as: :save_prospect
+  get 'survey/:prospect_id', to: 'landing#step', as: :pricing_survey
+  post 'save_prospect', to:'landing#create_prospect', as: :save_prospect
 
 
   root 'landing#home'
