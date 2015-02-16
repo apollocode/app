@@ -5,7 +5,7 @@ body {
 
 
 #brand {
-  background: url("/assets/logo-bg.png") top left no-repeat;
+  background: url('<%= asset_path("logo-bg.png") %>') top left no-repeat;
   position: absolute;
   top: 23px;
   left: 0;
@@ -22,7 +22,7 @@ body {
   top: 4px;
 }
 #brand span {
-  color:#636058;
+  color:#76716E;
   text-transform: uppercase;
   position: relative;
   right: 40px;
@@ -33,7 +33,7 @@ body {
 }
 
 #first-div, #survey-div {
-  background-image: url('/assetsbg_landing.jpg');
+  background-image: url("<%= asset_path('bg_landing.jpg') %>");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
