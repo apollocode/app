@@ -3,7 +3,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-
+#flash {
+  position: absolute;
+  top: 27px;
+  left: 467px;
+  right: 146px;
+}
 #brand {
   background: url('<%= asset_path("logo-bg.png") %>') top left no-repeat;
   position: absolute;
@@ -176,7 +181,7 @@ body {
   background-color: #fff0c9;
 }
 
-.call2action .submit {
+.call2action .submit, #survey-div .submit {
   height: 47px;
   font-weight: 500;
   border-radius: 7px;
@@ -195,7 +200,7 @@ body {
 }
 
 
-.call2action .submit:hover {
+.call2action .submit:hover, #survey-div .submit:hover {
 
   background: rgba(227,136,0,1);
   background: -moz-linear-gradient(top, rgba(227,136,0,1) 0%, rgba(235,98,0,1) 44%, rgba(235,98,0,1) 100%);
@@ -208,12 +213,178 @@ body {
 
 }
 
-/* Survey pge styles */
+/* Survey page styles */
 
+#survey-div .padder {
+  height:50px;
+}
+
+#survey-div .survey-header {
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  padding: 1px 13px 12px 12px;
+  margin-bottom: 30px;
+}
+#survey-div h1 {
+  font-size: 52px;
+}
+#survey-div .survey-header p {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
 
 #survey-div {
-
+  padding:8% 0 2%;
+  text-align: center
 }
+
+#survey-div .plan-container {
+/*  display: inline-block;
+  width: 362px;*/
+}
+#survey-div .header {
+  width: 100%;
+  height: 118px;
+  margin-top: 0;
+  background: rgba(255,140,0,1);
+  background: -moz-linear-gradient(top, rgba(255,140,0,1) 0%, rgba(255,119,0,1) 93%, rgba(255,119,0,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,140,0,1)), color-stop(93%, rgba(255,119,0,1)), color-stop(100%, rgba(255,119,0,1)));
+  background: -webkit-linear-gradient(top, rgba(255,140,0,1) 0%, rgba(255,119,0,1) 93%, rgba(255,119,0,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,140,0,1) 0%, rgba(255,119,0,1) 93%, rgba(255,119,0,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,140,0,1) 0%, rgba(255,119,0,1) 93%, rgba(255,119,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,140,0,1) 0%, rgba(255,119,0,1) 93%, rgba(255,119,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8c00', endColorstr='#ff7700', GradientType=0 );
+}
+
+#survey-div h3 {
+  width: 100%;
+  padding: 12px 30px;
+  height: 73px;
+  margin-top: 0;
+  text-align: center;
+}
+#survey-div h3.single-line {
+  padding-top: 22px;
+}
+
+#survey-div .plan-wrapper {
+  background-color: #fcf6ef;
+  background-color: rgba(255,255,255,0.7);
+  border: 1px solid #6b4f41;
+  margin-top: 20px;
+  text-align: left;
+}
+
+#survey-div .details {
+list-style: none;
+padding: 0 0 0 50px;
+font-size: 18px;
+margin:20px 0 10px;
+}
+#survey-div .fa {
+  color:#FF9000;
+  font-size:26px;
+  margin-right: 7px;
+  position: absolute;
+  left: -32px;
+  top: -1px;;
+}
+
+#survey-div .details ul{
+  list-style: none;
+  padding: 0 20px;
+  font-size: 15px;
+}
+
+#survey-div .details > li {
+  margin-top: 10px;
+  position: relative;
+}
+
+#survey-div .price {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  text-align: center;
+  font-size: 52px;
+  color: white;
+  font-weight: 200;
+  position: relative;
+  top: -25px;
+  text-shadow: rgb(196, 91, 0) 3px 2px 4px;
+}
+
+#survey-div .price span {
+  font-size: 32px;
+}
+
+
+#survey-div input[type="radio"] {
+  display: none;
+}
+
+#survey-div .center {
+  text-align: center;
+  padding:15px 0;
+}
+#survey-div .click {
+  display: inline-block;
+  font-size: 18px;
+  padding: 8px 47px;
+  background-color: #999999;
+}
+#survey-div .click:hover, #survey-div input[type="radio"]:checked + label {
+  background: rgba(242,145,0,1);
+  background: -moz-linear-gradient(top, rgba(242,145,0,1) 0%, rgba(230,106,39,1) 44%, rgba(230,106,39,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(242,145,0,1)), color-stop(44%, rgba(230,106,39,1)), color-stop(100%, rgba(230,106,39,1)));
+  background: -webkit-linear-gradient(top, rgba(242,145,0,1) 0%, rgba(230,106,39,1) 44%, rgba(230,106,39,1) 100%);
+  background: -o-linear-gradient(top, rgba(242,145,0,1) 0%, rgba(230,106,39,1) 44%, rgba(230,106,39,1) 100%);
+  background: -ms-linear-gradient(top, rgba(242,145,0,1) 0%, rgba(230,106,39,1) 44%, rgba(230,106,39,1) 100%);
+  background: linear-gradient(to bottom, rgba(242,145,0,1) 0%, rgba(230,106,39,1) 44%, rgba(230,106,39,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f29100', endColorstr='#e66a27', GradientType=0 );
+}
+
+#survey-div .details.first {
+margin-bottom: 29px;
+margin-top: 21px;
+}
+#survey-div .details.first > li {
+  margin-top:12px;
+}
+
+
+.side-wrapper textarea {
+  border-radius: 4px;
+  min-height: 200px;
+  width: 100%;
+  font-size: 16px;
+  padding: 3px 8px;
+  background-color: rgba(255,255,255,0.7);
+  margin-bottom: 30px;
+}
+
+.side-wrapper .caption {
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  padding: 8px;
+  margin-top: 31px;
+  margin-bottom: 16px;
+}
+
+.side-wrapper .caption h4{
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+
+#survey-div .plan-padder {
+  height: 50px;
+}
+
+
+
+
+
 
 
 

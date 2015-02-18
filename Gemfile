@@ -43,4 +43,5 @@ gem 'rails_12factor', group: :production
 group :development, :local do
   gem "better_errors"
   gem 'binding_of_caller'
+  gem 'pry'
 end

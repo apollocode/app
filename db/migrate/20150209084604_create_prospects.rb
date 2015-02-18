@@ -3,7 +3,8 @@ class CreateProspects < ActiveRecord::Migration
     create_table :prospects do |t|
       t.string :email
       t.string :campaign
-      t.json :data
+      t.integer :plan
+      t.text :comment
 
       t.timestamps
     end

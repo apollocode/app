@@ -19,7 +19,8 @@ ActiveRecord::Schema.define(version: 20150209084604) do
   create_table "prospects", force: true do |t|
     t.string   "email"
     t.string   "campaign"
-    t.json     "data"
+    t.integer  "plan"
+    t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'survey/:prospect_id', to: 'landing#step', as: :pricing_survey
-  post 'save_prospect', to:'landing#create_prospect', as: :save_prospect
-
+  post 'create_prospect', to:'landing#create_prospect', as: :create_prospect
+  put 'update_prospect/:prospect_id', to:'landing#update_prospect', as: :update_prospect
 
   root 'landing#home'
 

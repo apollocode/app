@@ -2,8 +2,16 @@
   <%= image_tag 'eggshell.svg' %>
   <span>Eclore</span>
 </div>
-
+<div id="flash">
+  <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>">
+        <a href="#" data-dismiss="alert" class="close">×</a>
+        <p><%= value %></p>
+      </div>
+  <% end %>
+</div>
 <div id="first-div">
+
   <div class="container-fluid">
     <div class="row">
       <div id="value-prop">
@@ -11,7 +19,7 @@
         <div class="subtitle"><span>Deviens autonome en développement web en 2 mois</span></div>
 
         <div class="call2action">
-          <%= form_for @prospect, url: save_prospect_path, method: 'post' do |f| %>
+          <%= form_for @prospect, url: create_prospect_path, method: 'post' do |f| %>
             <%= f.email_field :email, placeholder: 'patrick@sebastien.com', class: "control" %>`
             <%= f.submit 'Join the Revolution!', class: "submit" %>
           <% end %>
@@ -88,8 +96,8 @@
   <div class="container">
     <h2 class="color">Débuter en code peut sembler difficile, en réalité c'est si simple avec les resources adaptées!</h2>
     <div class="call2action">
-      <%= form_for @prospect, url: save_prospect_path, method: 'post' do |f| %>
-        <%= f.email_field :email, placeholder: 'patrick@sebastien.com', class: "control" %>`
+      <%= form_for @prospect, url: create_prospect_path, method: 'post' do |f| %>
+        <%= f.email_field :email, placeholder: 'patrick@sebastien.com', class: "control" %>
         <%= f.submit 'Join the Revolution!', class: "submit" %>
       <% end %>
     </div>
