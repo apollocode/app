@@ -97,7 +97,7 @@
     <h2 class="color">Débuter en code peut sembler difficile, en réalité c'est si simple avec les resources adaptées!</h2>
     <div class="call2action">
       <%= form_for @prospect, url: create_prospect_path, method: 'post' do |f| %>
-        <%= f.email_field :email, placeholder: 'patrick@sebastien.com', class: "control" %>
+        <%= f.email_field :email, placeholder: 'patrick@sebastien.com', class: "control", required: "required" %>
         <%= f.submit 'Join the Revolution!', class: "submit" %>
       <% end %>
     </div>
@@ -105,4 +105,8 @@
 </div>
 
 
-
+<% content_for :javascript_includes do %>
+  <script type="text/javascript">
+    mixpanel.track_links(".call2action .submit", "Interested in VP");
+  </script>
+<% end %>
