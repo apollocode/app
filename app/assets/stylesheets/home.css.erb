@@ -1,6 +1,38 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+#brand {
+  position:absolute;
+  width: 100%;
+  height: 100px;
+  background: -moz-linear-gradient(top,  rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 49%, rgba(255,255,255,0.6) 76%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.9)), color-stop(49%,rgba(255,255,255,0.9)), color-stop(76%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 49%,rgba(255,255,255,0.6) 76%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 49%,rgba(255,255,255,0.6) 76%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 49%,rgba(255,255,255,0.6) 76%,rgba(255,255,255,0) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 49%,rgba(255,255,255,0.6) 76%,rgba(255,255,255,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+#brand img {
+  height:75px;
+  width:auto;
+  position: relative;
+  top: 4px;
+  left:20px;
+}
+#brand span {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 20px;
+  color: #049CAB;
+  margin: 10px;
+  position: relative;
+  top: 15px;
+  font-weight: 300;
 }
 
 #flash {
@@ -9,33 +41,6 @@ body {
   left: 467px;
   right: 146px;
 }
-#brand {
-  background: url('<%= asset_path("logo-bg.png") %>') top left no-repeat;
-  position: absolute;
-  top: 23px;
-  left: 0;
-  width: 398px;
-  height: 55px;
-  background-size: cover;
-  text-align: right;
-}
-#brand img {
-  height: 43px;
-  width: auto;
-  position: relative;
-  right: 40px;
-  top: 4px;
-}
-#brand span {
-  color:#76716E;
-  text-transform: uppercase;
-  position: relative;
-  right: 40px;
-  font-weight: 500;
-  font-size: 25px;
-  letter-spacing: 4px;
-  top: 7px;
-}
 
 #first-div, #survey-div {
   background-image: url("<%= asset_path('bg_landing.jpg') %>");
@@ -43,7 +48,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  padding: 18% 6%;
+  padding: 17% 6%;
   text-align: center
 }
 #value-prop {
@@ -57,7 +62,7 @@ body {
   border-top: 1px dotted rgba(250, 250, 250, 1);
   border-bottom: 1px dotted rgba(250, 250, 250, 1);
   line-height: 60px;
-  font-weight: 400;
+  font-weight: 300;
   margin: 5px 0px -5px;
   padding: 10px 25px;
   color:white;
@@ -75,92 +80,6 @@ body {
   font-weight: 300;
   text-shadow: none;
   text-align: center
-}
-
-#second-div {
-  color: #332117;
-  padding: 70px 30px;
-}
-
-#second-div p {
-  font-size: 19px;
-  text-align: center;
-  padding-bottom: 25px;
-}
-
-#second-div .section-title {
-  text-transform: uppercase;
-}
-.section-title {
-  text-align: center;
-  line-height: 40px;
-  font-size: 40px;
-  color: #332117;
-}
-.color {
-  color: #f48a00;
-}
-
-#third-div {
-  padding: 70px 0;
-  background-color: #f48a00;
-  text-align: center;
-  color: white;
-}
-
-#third-div h2 {
-  color: white;
-  font-weight: 400;
-}
-
-#third-div p {
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin-top: 30px;
-  font-weight: 300;
-  color: #332117;
-}
-
-#third-div h4 {
-  letter-spacing: 1.5px;
-  height: 40px;
-  font-size: 25px;
-  font-weight: 400;
-  margin-top: 60px;
-  color: #332117;
-}
-
-#fourth-div {
-  padding: 70px 0;
-}
-#fourth-div h2 {
-  margin-bottom: 40px;
-}
-#fourth-div .item {
-  margin-bottom: 30px
-}
-#fourth-div .fa {
-  font-size: 40px;
-  padding-left: 20px;
-  padding-top: 10px;
-}
-
-#fourth-div .item span {
-  font-size: 20px;
-}
-
-
-
-
-#footer {
-  background-color: #f48a00;
-  text-align: center;
-  padding: 40px 0;
-}
-
-#footer h2 {
-  color:white;
-  font-weight: 400;
 }
 
 .call2action {
@@ -183,35 +102,72 @@ body {
 
 .call2action .submit, #survey-div .submit {
   height: 47px;
-  font-weight: 500;
   border-radius: 7px;
   font-size: 19px;
-  border: 1px solid #E77800;
+  border: 1px solid #44a0aa;
   padding: 10px 23px;
   margin-left: 27px;
-  background: rgba(242,145,0,1);
-  background: -moz-linear-gradient(top, rgba(242,145,0,1) 0%, rgba(230,106,39,1) 44%, rgba(230,106,39,1) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(242,145,0,1)), color-stop(44%, rgba(230,106,39,1)), color-stop(100%, rgba(230,106,39,1)));
-  background: -webkit-linear-gradient(top, rgba(242,145,0,1) 0%, rgba(230,106,39,1) 44%, rgba(230,106,39,1) 100%);
-  background: -o-linear-gradient(top, rgba(242,145,0,1) 0%, rgba(230,106,39,1) 44%, rgba(230,106,39,1) 100%);
-  background: -ms-linear-gradient(top, rgba(242,145,0,1) 0%, rgba(230,106,39,1) 44%, rgba(230,106,39,1) 100%);
-  background: linear-gradient(to bottom, rgba(242,145,0,1) 0%, rgba(230,106,39,1) 44%, rgba(230,106,39,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f29100', endColorstr='#e66a27', GradientType=0 );
+  color:white;
+  background:#049CAB;
 }
 
 
 .call2action .submit:hover, #survey-div .submit:hover {
-
-  background: rgba(227,136,0,1);
-  background: -moz-linear-gradient(top, rgba(227,136,0,1) 0%, rgba(235,98,0,1) 44%, rgba(235,98,0,1) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(227,136,0,1)), color-stop(44%, rgba(235,98,0,1)), color-stop(100%, rgba(235,98,0,1)));
-  background: -webkit-linear-gradient(top, rgba(227,136,0,1) 0%, rgba(235,98,0,1) 44%, rgba(235,98,0,1) 100%);
-  background: -o-linear-gradient(top, rgba(227,136,0,1) 0%, rgba(235,98,0,1) 44%, rgba(235,98,0,1) 100%);
-  background: -ms-linear-gradient(top, rgba(227,136,0,1) 0%, rgba(235,98,0,1) 44%, rgba(235,98,0,1) 100%);
-  background: linear-gradient(to bottom, rgba(227,136,0,1) 0%, rgba(235,98,0,1) 44%, rgba(235,98,0,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e38800', endColorstr='#eb6200', GradientType=0 );
-
+  background:#7ABDD4;
 }
+
+.call2action .placeholder {
+  position: relative;
+  display: inline;
+  top: 39px;
+  right: 176px;
+  font-size: 19px;
+  color: #999999;
+  font-weight: 300;
+}
+
+#second-div {
+  color:#666666;
+  text-align: center;
+  padding:70px;
+  font-size: 18px
+}
+
+#third-div {
+  padding:50px;
+  background-color: #049CAB;
+  color: white;
+  text-align: center;
+}
+#third-div h2 {
+  font-weight: 300
+}
+#third-div p {
+  font-size: 18px
+}
+
+
+#footer {
+  background-color: #424242;
+  text-align: center;
+  padding: 40px 0;
+}
+
+#footer h2 {
+  color:white;
+  font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* Survey page styles */
 

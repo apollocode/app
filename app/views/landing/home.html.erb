@@ -1,7 +1,9 @@
-<div id="brand">
-  <%= image_tag 'eggshell.svg' %>
+<nav id="brand">
+  <%= image_tag 'logo_mvp.png' %>
   <span>Eclore</span>
-</div>
+</nav>
+
+
 <div id="flash">
   <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>">
@@ -15,13 +17,14 @@
   <div class="container-fluid">
     <div class="row">
       <div id="value-prop">
-        <div class="title"><span>Lance toi! Apprends à coder</span></div>
-        <div class="subtitle"><span>Deviens autonome en développement web en 2 mois</span></div>
+        <div class="title"><span>La première formation au code immersive et en ligne</span></div>
+        <div class="subtitle"><span>Devenez un développeur accompli en 3 mois</span></div>
 
         <div class="call2action">
+          <!-- <span class="placeholder"><strike>Courriel</strike>&nbsp Email</span> -->
           <%= form_for @prospect, url: create_prospect_path, method: 'post' do |f| %>
-            <%= f.email_field :email, placeholder: 'patrick@sebastien.com', class: "control" %>`
-            <%= f.submit 'Join the Revolution!', class: "submit" %>
+            <%= f.email_field :email, placeholder: "Email", class: "control" %>`
+            <%= f.submit 'Je me lance', class: "submit" %>
           <% end %>
         </div>
       </div>
@@ -32,72 +35,36 @@
 <div id="second-div">
   <div class="container">
     <div class="row">
-      <h2 class='section-title'>Notre <span class="color">histoire</span></h2>
-
-      <p>Le programmeur est l’artisan des temps moderne. Apprendre à coder, c’est devenir créateur, avoir le pouvoir de <strong class="color">donner vie à ses idées</strong> et qui sait, d’améliorer le quotidien de millions de gens!</p>
-
-      <p>Quand j’étais en <strong class="color">école de commerce</strong>, je sentais qu’il me manquait quelque chose. Je sentais que je voulais créer, et cette élan m’a amené à apprendre la programmation, puis à travailler comme développeur dans plusieurs startups a Paris et à San Francisco. Je ne savais pas à l’époque que cette décision changerait ma vie et m’ouvrirait tant d’horizons et de possibilités. J’ai créé <strong class="color">E C L O R E</strong> pour donner à d’autres la chance de trouver leur voie et découvrir qui ils sont!</p>
-
-      <p>Notre ambition est simple: a travers <strong class="color">l’apprentissage du code</strong>, nous voulons aider les gens à faire leurs propres choix et poursuivre leurs rêves, quels qu’ils soient!</p>
+      <div class="col-md-4">
+        <h4>Une pédagogie intelligente</h4>
+        <p>TVidéos, infographies, et exercices concrets et directement applicables pour vous transmettre le savoir et les réflexes indispensables du développement web</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Une formation à votre rythme</h4>
+        <p>Terminez le programme en 2 à 4 mois selon le nombre d'heures que vous y consacrez chaque semaine</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Des mentors toujours à votre disposition</h4>
+        <p>Un problème? Ne restez jamais bloqués, vous pouvez en permanence nous contacter pour poser vos questions ou approfondir certains points</p>
+      </div>
     </div>
   </div>
 </div>
 
 <div id="third-div">
   <div class="container">
-    <h2 class='section-title'>Une formation complète, à votre rythme (2 à 3 mois) avec:</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <h4>Un objectif clair, simple et ambitieux</h4>
-        <p>Transformer de parfaits débutants en développeurs autonomes, capables de réaliser une application web et de continuer à apprendre par eux-mêmes</p>
-      </div>
-      <div class="col-md-4">
-        <h4>Une pédagogie créée en conséquence</h4>
-        <p>Outre les compétences techniques nécessaires, nous vous transmettrons les savoirs pratiques, les modes de pensée et les reflexes essentiels qu'un développeur doit avoir</p>
-      </div>
-      <div class="col-md-4">
-        <h4>Les professeurs parfaits pour le job</h4>
-        <p>Yann et Louis ont appris à coder tard et comprennent les difficultés des débutants. Et pour les points plus corsés, ils font appel à un boss du code qui s'appelle Jérome et carbure au café</p>
-      </div>
-    </div>
+    <h2>A qui s'adresse Eclore ?</h2>
+    <p>Notre service est adapté au débutant. Il repose sur un programme immersif et innovant, structuré pour vous rendre autonome en 2 à 4 mois.</p>
+    <p>Quel que soit votre niveau d’étude ou expérience, que vous souhaitiez construire votre application web, gérer une équipe de développeurs, ou acquérir un nouveau savoir-faire, Eclore vous offre les moyens de prendre part à au monde de demain.</p>
   </div>
 </div>
-
-
-<div id="fourth-div">
-  <div class="container">
-    <h2 class='section-title'>Des vidéos, notes de cours et exercices corrigés tout au long du programme, pour une formation...</h2>
-    <div class="row item">
-      <div class="col-xs-1"><i class="fa fa-check-square-o"></i></div>
-      <div class="col-xs-11">
-          <span>Centrée sur Ruby on Rails, un outil de développement web incroyablement puissant et intuitif, parfait pour débuter comme pour des usages avancés</span>
-      </div>
-    </div>
-    <div class="row item">
-      <div class="col-xs-1"><i class="fa fa-check-square-o"></i></div>
-      <div class="col-xs-11">
-          <span>Intégrant toutes les autres technologies indispensables au développement (HTML/CSS, Javascript, Git&amp;Github…)</span>
-      </div>
-    </div>
-
-    <div class="row item">
-      <div class="col-xs-1"><i class="fa fa-check-square-o"></i></div>
-      <div class="col-xs-11">
-          <span>Où vous travaillerez avec les vrais outils qu'utilisent les développeurs! A la fin du programme, votre ordinateur sera parfaitement configuré et équipé et vous, vous serez prets a donner vie à vos idées!</span>
-      </div>
-    </div>
-
-
-  </div>
-</div>
-
 
 <div id="footer">
   <div class="container">
-    <h2 class="color">Débuter en code peut sembler difficile, en réalité c'est si simple avec les resources adaptées!</h2>
+    <h2>Apprendre à coder peut sembler difficile, en réalité c'est si simple avec les resources adaptées!</h2>
     <div class="call2action">
       <%= form_for @prospect, url: create_prospect_path, method: 'post' do |f| %>
-        <%= f.email_field :email, placeholder: 'patrick@sebastien.com', class: "control", required: "required" %>
+        <%= f.email_field :email, placeholder: 'Email', class: "control", required: "required" %>
         <%= f.submit 'Join the Revolution!', class: "submit" %>
       <% end %>
     </div>
@@ -108,5 +75,30 @@
 <% content_for :javascript_includes do %>
   <script type="text/javascript">
     mixpanel.track_links(".call2action .submit", "Interested in VP");
+  </script>
+  <script type="text/javascript">
+
+    // $('.call2action').each(function(){
+    //   this.children('.control').focus(function(){
+    //     console.log("focusin");
+    //     this.children('.placeholder').css("display", "none")
+    //   });
+    //   this.children('.control').focusout(function(){
+    //     console.log("focusout");
+
+    //     this.children('.placeholder').css("display", "inline")
+    //   });
+
+    // })
+
+    // $('.call2action .control').focus(function(){
+    //   console.log("focusin");
+    //   $('.call2action .placeholder').css("display", "none")
+    // });
+    // $('.call2action .control').focusout(function(){
+    //   console.log("focusout");
+
+    //   $('.call2action .placeholder').css("display", "inline")
+    // });
   </script>
 <% end %>
