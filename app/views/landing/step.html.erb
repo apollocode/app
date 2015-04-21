@@ -1,5 +1,5 @@
 <div id="brand">
-  <%= image_tag 'eggshell.svg' %>
+  <%= image_tag 'logo_mvp.png' %>
   <span>Eclore</span>
 </div>
 
@@ -10,7 +10,7 @@
       <div class="survey-header">
         <h1>Merci de votre intérêt!</h1>
         <p>Nous sommes à pied d'oeuvre pour terminer la plateforme et les cours au plus vite. Vous serez averti dès qu'ils seront prêts</p>
-        <p>Aidez-nous à créer le service <strong class="color">idéal pour vous </strong>: dites-nous laquelle de ces offres vous interesse le plus</p>
+        <p>Aidez-nous à créer le service <strong>idéal pour vous</strong>: dites-nous laquelle de ces offres vous interesse le plus</p>
       </div>
     </div>
 </div>
@@ -21,7 +21,7 @@
           <div class="plan-wrapper">
             <div class="header">
               <h3 class="single-line">Développement Web</h3>
-              <div class="price">150<span>€</span></div>
+              <div class="price">250<span>€</span></div>
             </div>
             <ul class="details first">
               <li>
@@ -46,8 +46,8 @@
             </ul>
             <div class="plan-padder hidden-lg hidden-xs hidden-sm"></div>
             <div class="center">
-            <%= f.radio_button :plan, 150 %>
-            <%= f.label :plan, "Selectionner", value: 150, class: "btn btn-default click"%>
+            <%= f.radio_button :plan, 250 %>
+            <%= f.label :plan, "Selectionner", value: 250, class: "btn btn-default click"%>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@
           <div class="plan-wrapper">
             <div class="header">
               <h3>Développement Web et Mobile</h3>
-              <div class="price">250<span>€</span></div>
+              <div class="price">350<span>€</span></div>
             </div>
             <ul class="details">
               <li><i class="fa fa-check"></i><span>Fondamentaux de la programmation</span></li>
@@ -72,8 +72,8 @@
               </li>
             </ul>
 <div class="center">
-  <%= f.radio_button :plan, 250 %>
-            <%= f.label :plan, "Selectionner", value: 250, class: "btn btn-default click"%>
+  <%= f.radio_button :plan, 350 %>
+            <%= f.label :plan, "Selectionner", value: 350, class: "btn btn-default click"%>
 
             </div>
           </div>
@@ -84,10 +84,10 @@
 
         <div class="side-wrapper">
           <div class="caption">
-            <h4>N'hésitez pas a nous faire part de vos commentaires ou expliquer votre choix, on est a votre écoute!</h4>
+            <h4>Donnez nous vos feedbacks</h4>
           </div>
           <div class="form-group">
-            <%= f.text_area :comment, placeholder: "Aller, sois sympa, explique nous ton choix!" %>
+            <%= f.text_area :comment, placeholder: "N'hésitez pas à nous faire part de vos commentaires ou expliquer votre choix, nous sommes à votre écoute!" %>
           </div>
 
           <%= f.submit 'Envoyer', class: "submit" %>
